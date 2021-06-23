@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+@import "./var";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 800px;
+  background: $Very_dark_blue;
+  figure {
+    position: absolute;
+    z-index: 10;
+    bottom: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    > svg:nth-child(2) {
+      margin: 0 30px;
+    }
+  }
+  h1 {
+    line-height: 1;
+    margin-top: 140px;
+    color: $White;
+    font-size: 1.57em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+  #star {
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+  #hill {
+    height: 197px;
+    position: absolute;
+    bottom: 0;
+    width: 1440px;
+    object-fit: cover;
+  }
+}
+
+@media (hover: hover) {
+  main {
+    figure {
+      svg {
+        cursor: pointer;
+      }
+      svg:hover > path {
+        fill: $Soft_red;
+        transition: 200ms ease;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    height: 700px;
+    figure {
+      bottom: 50px;
+    }
+    h1 {
+      width: 30ch;
+      line-height: 1.8;
+      text-align: center;
+      font-size: 1.28em;
+      margin-top: 80px;
+    }
+  }
+}

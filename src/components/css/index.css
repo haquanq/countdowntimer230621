@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 800px;
+  background: #1e1f29;
+}
+
+main figure {
+  position: absolute;
+  z-index: 10;
+  bottom: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main figure svg {
+  width: 24px;
+  height: 24px;
+}
+
+main figure > svg:nth-child(2) {
+  margin: 0 30px;
+}
+
+main h1 {
+  line-height: 1;
+  margin-top: 140px;
+  color: white;
+  font-size: 1.57em;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+main #star {
+  top: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+main #hill {
+  height: 197px;
+  position: absolute;
+  bottom: 0;
+  width: 1440px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (hover: hover) {
+  main figure svg {
+    cursor: pointer;
+  }
+  main figure svg:hover > path {
+    fill: #fb6087;
+    -webkit-transition: 200ms ease;
+    transition: 200ms ease;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    height: 700px;
+  }
+  main figure {
+    bottom: 50px;
+  }
+  main h1 {
+    width: 30ch;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.28em;
+    margin-top: 80px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
